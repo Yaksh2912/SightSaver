@@ -1,48 +1,92 @@
+/* Hero Section */
 .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  text-align: center;
-  background-color: #f9fbfd;
   padding: 2rem;
+  text-align: center;
+  background: linear-gradient(45deg, #ffffff, #bcd7e3b5);
   font-family: 'Georgia', serif;
-  color: #495057; /* Sets base font color */
+  color: #333;
 }
 
+/* Title Styling */
 .hero-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  color: #495057; /* Title color */
+  color: #2a2a2a;
   margin-bottom: 1rem;
   line-height: 1.4;
 }
 
+/* Subtitle Styling */
 .hero-subtitle {
-  font-size: 1.1rem;
-  color: #495057; /* Subtitle color */
-  max-width: 700px;
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 720px;
   line-height: 1.6;
   margin-bottom: 2.5rem;
 }
 
+/* Image Base Style */
+/* .hero-image {
+  width: 90%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.25);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  will-change: opacity, transform;
+} */
 .hero-image {
   width: 100%;
   max-width: 500px;
-  height: auto;
-  border-radius: 0.5rem;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  height: 320px; /* Fixed height for uniformity */
+  border-radius: 1rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.25);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  object-fit: cover; /* Ensures image fills the box cleanly */
+  object-position: center; /* Keeps focus on center */
+  will-change: opacity, transform;
 }
 
-/* Responsive scaling */
-@media (min-width: 768px) {
+
+
+
+/* Hover Effect for Desktop */
+@media (hover: hover) {
+  .hero-image:hover {
+    transform: scale(1.03);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Fade-in Animation */
+.fade-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Fade-out Animation */
+.fade-out {
+  opacity: 0;
+  transform: scale(0.96);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
   .hero-title {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
 
   .hero-subtitle {
-    font-size: 0.85rem;
-    color: #878AB3;
+    font-size: 1rem;
+    padding: 0 1rem;
   }
 }
