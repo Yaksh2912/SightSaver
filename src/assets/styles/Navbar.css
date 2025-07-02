@@ -1,4 +1,3 @@
-
 /* Sticky Navbar */
 .navbar.sticky {
   position: sticky;
@@ -6,6 +5,16 @@
   z-index: 1000;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Navbar Show/Hide on Scroll */
+.navbar.hidden {
+  transform: translateY(-100%);
+}
+
+.navbar.visible {
+  transform: translateY(0);
 }
 
 /* Navbar Container */
@@ -169,114 +178,29 @@
   background-color: #2a09e9ac;
 }
 
-
-/* @media (max-width: 768px) {
-  .navbar-top {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .navbar-right {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .navbar-bottom {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 16px 5%;
-    width: 100%;
-  }
-
-  .navbar-bottom.show {
-    display: flex;
-  }
-
-  .navbar-links {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-  }
-
-  .auth-buttons {
-    width: 100%;
-    justify-content: flex-start;
-  }
-
-  .btn {
-    width: 100px;
-  }
-} */
-
+/* Responsive: Mobile View */
 @media (max-width: 768px) {
   .navbar-top {
-    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
-    justify-content: center;
-    padding: 20px 5%;
-    gap: 12px;
-  }
-  
-  .vertical-line{
-    display: none;
+    padding: 10px 5%;
   }
 
-  .partner-logos {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  width: 100%;
-  }
-
-  .navbar-left {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    width: 100%;
-  }
-
-  .brand-name {
-    font-size: 22px;
-    text-align: center;
-  }
-
-  .ministry-logo {
-    height: 45px;
-    margin-top: 6px;
-  }
-
-  .navbar-right {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-  }
-
-  .language-dropdown {
-    text-align: center;
-  }
-
-  .circle-logo {
-    height: 36px;
-    width: 36px;
+  .navbar-left,
+  .language-dropdown,
+  .partner-logos,
+  .vertical-line {
+    display: none !important;
   }
 
   .hamburger {
     display: block;
-    font-size: 26px;
+    font-size: 28px;
     padding: 8px 12px;
     background-color: #f0f0f0;
     border-radius: 6px;
     border: 1px solid #ccc;
-    margin-top: 8px;
   }
 
   .navbar-bottom {
