@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/styles/Features.css';
+import '../../assets/styles/Features.css';
 import { FaDiagnoses, FaProjectDiagram, FaServer, FaHeadphones, FaNetworkWired, FaMedkit } from 'react-icons/fa';
 
 const featureData = [

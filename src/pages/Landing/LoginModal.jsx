@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../assets/styles/LoginModal.css';
+import '../../assets/styles/LoginModal.css';
 
 const LoginModal = () => {
   const navigate = useNavigate();

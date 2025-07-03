@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import Face1 from '../assets/images/half_face.png';
-import Face2 from '../assets/images/sight-saver-logo.png';
-import Face3 from '../assets/images/features_image.png';
-import '../assets/styles/Hero.css';
+import Slide1 from '../../assets/images/slide1.jpg';
+import Slide2 from '../../assets/images/Slide2.jpg';
+import Slide3 from '../../assets/images/slide3.jpg';
+import '../../assets/styles/Hero.css';
 
-const images = [Face1, Face2, Face3];
+const images = [Slide1, Slide2, Slide3];
 
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

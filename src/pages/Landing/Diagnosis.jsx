@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import '../assets/styles/Diagnosis.css';
+import '../../assets/styles/Diagnosis.css';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import Feature from '../assets/images/features_image.png';
+import Feature from '../../assets/images/features_image.png';
 
 const messages = [
   'SightSaver.ai can detect DR, HTNR, Glucoma and Occlusion.',

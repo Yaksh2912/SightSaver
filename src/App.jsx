@@ -1,13 +1,13 @@
 import React from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import Hero from './pages/Hero';
-import About from './pages/About';
-import LoginModal from './pages/LoginModal';
-import RegisterModal from './pages/RegisterModal';
+import Hero from './pages/Landing/Hero';
+import About from './pages/Landing/About';
+import LoginModal from './pages/Landing/LoginModal';
+import RegisterModal from './pages/Landing/RegisterModal';
 import Navbar from './components/Navbar';
-import Features from './pages/Features';
-import Diagnosis from './pages/Diagnosis';
-import Contact from './pages/Contact';
+import Features from './pages/Landing/Features';
+import Diagnosis from './pages/Landing/Diagnosis';
+import Contact from './pages/Landing/Contact';
 import Footer from './components/Footer';
 
 const App = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../assets/styles/RegisterModal.css';
+import '../../assets/styles/RegisterModal.css';
 
 const RegisterModal = () => {
   const navigate = useNavigate();

@@ -1,6 +1,5 @@
 import React from 'react';
-import EyeImage from '../assets/images/eye_image.png';
-import '../assets/styles/About.css'; // Link to your CSS file
+import '../../assets/styles/About.css'; // Link to your CSS file
 
 const About = () => {
     return (
