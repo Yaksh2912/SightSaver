@@ -52,7 +52,7 @@ const Contact = () => {
             <textarea placeholder="Your message..." rows="5" />
           </div>
 
-          <button type="submit" className="submit-btn">Submit</button>
+          <button type="submit" className="submit-btn-contact">Submit</button>
         </form>
       </div>
     </section>

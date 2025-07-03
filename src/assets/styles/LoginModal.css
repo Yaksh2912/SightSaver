@@ -80,7 +80,7 @@ body.modal-open {
 /* Submit Button */
 .submit-btn {
   width: 100%;
-  background-color: #4a3906;
+  background-color: #1a1364;
   color: white;
   padding: 12px;
   font-size: 15px;
@@ -92,7 +92,7 @@ body.modal-open {
 }
 
 .submit-btn:hover {
-  background-color: #5a4709;
+  background-color: #0f0c3c;
 }
 
 /* Close Icon */
