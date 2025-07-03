@@ -4,7 +4,7 @@ import CDAC from '../assets/images/cdac-logo.png';
 import MedClg from '../assets/images/gmch.png';
 import Ministry from '../assets/images/ministry-logo.png';
 import Sightsaver from '../assets/images/sight-saver-logo.png';
-import { useNavigate, useLocation, Link } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -53,6 +53,14 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleScrollTo = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setMenuOpen(false); // close menu on mobile after scroll
+    }
+  };
+
   return (
     <header className={`navbar sticky ${showNavbar ? 'visible' : 'hidden'}`}>
       <div className="navbar-top">
@@ -70,7 +78,6 @@ const Navbar = () => {
               <ul className="dropdown-menu">
                 <li onClick={() => handleLanguageSelect('English')}>English</li>
                 <li onClick={() => handleLanguageSelect('Hindi')}>हिन्दी</li>
-                <li onClick={() => handleLanguageSelect('Punjabi')}>ਪੰਜਾਬੀ</li>
               </ul>
             )}
           </div>
@@ -85,11 +92,11 @@ const Navbar = () => {
 
       <nav className={`navbar-bottom ${menuOpen ? 'show' : ''}`}>
         <div className="navbar-links">
-          <a href="/" onClick={() => setMenuOpen(false)}>Home</a>
-          <a href="/about" onClick={() => setMenuOpen(false)}>About Us</a>
-          <a href="/features" onClick={() => setMenuOpen(false)}>Features</a>
-          <a href="/diagnostics" onClick={() => setMenuOpen(false)}>Disease Diagnostics</a>
-          <a href="/contact" onClick={() => setMenuOpen(false)}>Contact</a>
+          <button onClick={() => handleScrollTo('home')}>Home</button>
+          <button onClick={() => handleScrollTo('about')}>About Us</button>
+          <button onClick={() => handleScrollTo('features')}>Features</button>
+          <button onClick={() => handleScrollTo('diagnosis')}>Disease Diagnostics</button>
+          <button onClick={() => handleScrollTo('contact')}>Contact</button>
         </div>
         <div className="auth-buttons">
           <button className="btn login" onClick={openLogin}>Login</button>

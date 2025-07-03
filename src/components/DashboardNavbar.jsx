@@ -43,7 +43,7 @@ const DashboardNavbar = () => {
             <div className="dropdown-menu">
               <div className="dropdown-item">English</div>
               <div className="dropdown-item">Hindi</div>
-              <div className="dropdown-item">Punjabi</div>
+              {/* <div className="dropdown-item">Punjabi</div> */}
             </div>
           )}
         </div>

@@ -4,7 +4,7 @@
   top: 0;
   z-index: 1000;
   background-color: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
 }
 
@@ -146,14 +146,19 @@
   flex-wrap: wrap;
 }
 
-.navbar-links a {
+/* Button Style for Navbar Links */
+.navbar-links button {
+  background: none;
+  border: none;
   color: white;
-  text-decoration: none;
   font-size: 17px;
   font-weight: 500;
+  cursor: pointer;
+  padding: 6px 10px;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-.navbar-links a:hover {
+.navbar-links button:hover {
   color: #ffd;
   text-decoration: underline;
 }
@@ -172,6 +177,7 @@
   font-weight: bold;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
@@ -221,6 +227,12 @@
     align-items: center;
     width: 100%;
     gap: 10px;
+  }
+
+  .navbar-links button {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
   }
 
   .auth-buttons {
