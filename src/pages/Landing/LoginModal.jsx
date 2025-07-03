@@ -9,6 +9,10 @@ const LoginModal = () => {
     navigate('/');
   };
 
+  const handleSignIn = () => {
+    navigate('/dashboard');
+  };
+
   return (
     <div className="login-overlay"  onClick={closeModal}>
       <div className="login-modal"  onClick={(e) => e.stopPropagation()}>
@@ -26,7 +30,7 @@ const LoginModal = () => {
           <label htmlFor="remember">Remember me</label>
         </div>
 
-        <button className="submit-btn">Sign In</button>
+        <button className="submit-btn" onClick={handleSignIn}>Sign In</button>
       </div>
     </div>
   );
