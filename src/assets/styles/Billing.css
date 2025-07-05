@@ -1,0 +1,9 @@
+/* src/assets/styles/Billing.css */
+
+.billing-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+

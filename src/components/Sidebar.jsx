@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import '../assets/styles/Sidebar.css';
 import {
   FaTachometerAlt, FaUserMd, FaFlask, FaUsers,
@@ -9,6 +9,7 @@ import { IoLocationSharp } from 'react-icons/io5';
 import { MdOutlineMenu } from 'react-icons/md';
 
 const Sidebar = () => {
+  const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(true);
   const [openMenus, setOpenMenus] = useState({
     reception: false,
@@ -18,10 +19,23 @@ const Sidebar = () => {
     users: false,
   });
 
+  // Auto-expand the correct submenu based on route
+  useEffect(() => {
+    const path = location.pathname;
+
+    setOpenMenus({
+      reception: path.startsWith('/reception'),
+      appointments: path.startsWith('/appointments'),
+      doctor: path.startsWith('/doctor'),
+      opthomologist: path.startsWith('/opthomologist'),
+      users: path.startsWith('/users'),
+    });
+  }, [location.pathname]);
+
   const toggleMenu = (menu) => {
     setOpenMenus((prev) => {
       const newMenus = {};
-      Object.keys(prev).forEach(key => {
+      Object.keys(prev).forEach((key) => {
         newMenus[key] = key === menu ? !prev[menu] : false;
       });
       return newMenus;
@@ -39,6 +53,7 @@ const Sidebar = () => {
           <FaTachometerAlt /> {menuOpen && <span>Dashboard</span>}
         </NavLink>
 
+        {/* Reception */}
         <div className="sidebar-item" onClick={() => toggleMenu('reception')}>
           <FaUserMd /> <span>Reception</span>
           {menuOpen && <FaAngleRight className={`arrow ${openMenus.reception ? 'rotate' : ''}`} />}
@@ -51,6 +66,7 @@ const Sidebar = () => {
           </div>
         )}
 
+        {/* Appointments */}
         <div className="sidebar-item" onClick={() => toggleMenu('appointments')}>
           <FaCalendarAlt /> <span>Appointments</span>
           {menuOpen && <FaAngleRight className={`arrow ${openMenus.appointments ? 'rotate' : ''}`} />}
@@ -62,6 +78,7 @@ const Sidebar = () => {
           </div>
         )}
 
+        {/* Doctor */}
         <div className="sidebar-item" onClick={() => toggleMenu('doctor')}>
           <IoLocationSharp /> <span>Doctor</span>
           {menuOpen && <FaAngleRight className={`arrow ${openMenus.doctor ? 'rotate' : ''}`} />}
@@ -76,6 +93,7 @@ const Sidebar = () => {
           </div>
         )}
 
+        {/* Ophomologist */}
         <div className="sidebar-item" onClick={() => toggleMenu('opthomologist')}>
           <IoLocationSharp /> <span>Ophomologist</span>
           {menuOpen && <FaAngleRight className={`arrow ${openMenus.opthomologist ? 'rotate' : ''}`} />}
@@ -88,6 +106,7 @@ const Sidebar = () => {
           </div>
         )}
 
+        {/* Direct Pages */}
         <NavLink to="/laboratory-tests" className={({ isActive }) => `sidebar-item ${isActive ? 'active' : ''}`}>
           <FaFlask /> {menuOpen && <span>Laboratory Tests</span>}
         </NavLink>
@@ -96,6 +115,7 @@ const Sidebar = () => {
           <FaShareAlt /> {menuOpen && <span>Reports</span>}
         </NavLink>
 
+        {/* Users */}
         <div className="sidebar-item" onClick={() => toggleMenu('users')}>
           <FaUsers /> <span>Users</span>
           {menuOpen && <FaAngleRight className={`arrow ${openMenus.users ? 'rotate' : ''}`} />}

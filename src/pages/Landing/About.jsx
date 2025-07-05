@@ -4,18 +4,6 @@ import '../../assets/styles/About.css'; // Link to your CSS file
 const About = () => {
     return (
         <div id="about_section" className="about-container">
-            {/* Hero Section */}
-            {/* <section className="about-hero">
-                <img
-                    src={EyeImage}
-                    alt="Tech and healthcare"
-                    className="about-image"
-                />
-            </section> */}
-
-            {/* <hr className="about-divider" /> */}
-
-            {/* About Content */}
             <section id="about" className="about-content">
                 <h2 className="about-heading">About Us</h2>
                 <p className="about-paragraph">

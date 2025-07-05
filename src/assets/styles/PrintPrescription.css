@@ -1,0 +1,20 @@
+.page-container {
+  background-color: #f7f2ed; /* light beige like the screenshot */
+  padding: 2rem;
+  height: 100vh;
+}
+
+.page-title {
+  background-color: #806300; /* dark mustard */
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.coming-soon {
+  font-size: 16px;
+  color: #333;
+  padding-left: 10px;
+}
