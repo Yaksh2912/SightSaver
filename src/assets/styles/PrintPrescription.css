@@ -1,20 +1,42 @@
-.page-container {
-  background-color: #f7f2ed; /* light beige like the screenshot */
+/* === Full Page Layout === */
+.dashboard-container {
+  background-color: #f5f6fa;
+  min-height: 100vh;
   padding: 2rem;
-  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
 }
 
+/* === Inner Content Area === */
+.main-content {
+  max-width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e0e0;
+}
+
+/* === Page Title Bar === */
 .page-title {
-  background-color: #806300; /* dark mustard */
-  color: white;
-  font-weight: bold;
-  padding: 10px 20px;
-  margin-bottom: 20px;
-  font-size: 18px;
+  background-color: #5b5ebb;
+  color: #ffffff;
+  padding: 16px 24px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
+/* === Placeholder Content === */
 .coming-soon {
-  font-size: 16px;
-  color: #333;
-  padding-left: 10px;
+  font-size: 1.1rem;
+  color: #444;
+  padding: 2rem;
+  background-color: #fafafa;
+  border: 1px dashed #bbb;
+  border-radius: 8px;
+  text-align: center;
 }

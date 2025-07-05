@@ -2,3 +2,11 @@
   display: flex;
   overflow: hidden;
 }
+
+.dashboard-content {
+  flex: 1;
+  padding: 2rem;
+  background-color: #ffffff;
+  height: 100vh;
+  overflow-y: auto;
+}

@@ -1,9 +1,14 @@
-import React from 'react'
+// src/pages/Billing.jsx
+import React from 'react';
+import '../../../assets/styles/Billing.css';
 
-const billing = () => {
+const Billing = () => {
   return (
-    <div className='billing-page'>billing</div>
-  )
-}
+    <div className="billing-page">
+      <div className="billing-header">PATIENT BILLING</div>
+      <div className="billing-content">Coming Soon</div>
+    </div>
+  );
+};
 
-export default billing
+export default Billing;

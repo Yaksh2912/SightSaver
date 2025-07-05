@@ -1,88 +1,132 @@
-.patient-register-page {
+/* === Page Background === */
+.pr-dashboard-content {
+  background-color: #f5f6fa;
   padding: 2rem;
-  background-color: #f9f7f3;
   min-height: 100vh;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
 }
 
-.form-container {
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
-  padding: 2rem;
-  max-width: 90%;
-  margin: auto;
-}
-
-.form-title {
-  background-color: #5e460b;
-  color: white;
-  padding: 0.75rem 1rem;
-  font-weight: bold;
-  font-size: 1.2rem;
-  border-radius: 5px 5px 0 0;
-}
-
-.registration-form fieldset {
-  border: 1px solid #999;
-  padding: 1rem;
-  margin-top: 1.5rem;
-  border-radius: 6px;
-}
-
-.registration-form legend {
-  font-weight: bold;
-  font-size: 1rem;
-  color: #5e460b;
-}
-
-.form-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.full-width {
-  grid-column: span 2;
-}
-
-label {
-  display: block;
-  font-weight: 500;
-  margin-bottom: 4px;
-}
-
-input[type="text"],
-input[type="tel"],
-input[type="date"] {
+/* === White Form Card === */
+.pr-form-container {
   width: 100%;
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #aaa;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  border: 1px solid #e1e1e1;
 }
 
-.radio-group,
-.checkbox-group {
+/* === Top Form Header === */
+.pr-form-title {
+  background-color: #5b5ebb;
+  color: #ffffff;
+  padding: 18px 28px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-bottom: 1px solid #ccc;
+  letter-spacing: 0.5px;
+}
+
+/* === Section Groups === */
+.pr-registration-form fieldset {
+  border: none;
+  background-color: #f9f9f9;
+  padding: 28px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.pr-registration-form legend {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 18px;
+  border-left: 4px solid #5b5ebb;
+  padding-left: 12px;
+}
+
+/* === Grid Layout === */
+.pr-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.pr-full-width {
+  grid-column: 1 / -1;
+}
+
+/* === Label & Inputs === */
+.pr-registration-form label {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.pr-registration-form input[type="text"],
+.pr-registration-form input[type="tel"],
+.pr-registration-form input[type="date"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  background-color: #fff;
+  transition: border-color 0.2s;
+}
+
+.pr-registration-form input:focus {
+  outline: none;
+  border-color: #5b5ebb;
+  box-shadow: 0 0 0 2px rgba(91, 94, 187, 0.2);
+}
+
+/* === Radio/Checkbox Styling === */
+.pr-radio-group,
+.pr-checkbox-group {
   display: flex;
-  gap: 1rem;
   flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 6px;
 }
 
-.button-group {
+.pr-radio-group label,
+.pr-checkbox-group label {
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* === Buttons === */
+.pr-button-group {
+  padding: 20px 28px;
+  background-color: #f7f7f7;
+  border-top: 1px solid #e0e0e0;
   display: flex;
   justify-content: flex-end;
-  gap: 1rem;
-  margin-top: 1.5rem;
+  gap: 14px;
 }
 
-.btn {
-  padding: 0.5rem 1.5rem;
+.pr-btn {
+  padding: 10px 22px;
+  font-size: 0.95rem;
+  font-weight: 600;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
-  color: white;
+  color: #fff;
+  background-color: #5b5ebb;
+  transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
-.btn.brown {
-  background-color: #5e460b;
+.pr-btn:hover {
+  background-color: #4345a3;
+  transform: translateY(-1px);
+}
+
+.pr-btn:active {
+  transform: translateY(0);
+  background-color: #3b3e8a;
 }
