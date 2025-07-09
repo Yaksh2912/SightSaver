@@ -1,0 +1,121 @@
+.doctor-list-page {
+  background: #ffffff;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.doctor-list-header {
+  background-color: #5b5ebb;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px 8px 0 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.doctor-list-table-wrapper {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+.doctor-list-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+.doctor-list-table th,
+.doctor-list-table td {
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+}
+
+/* Input filters */
+.doctor-list-table th input {
+  width: 100%;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+.doctor-list-table th {
+  background-color: #fafafa;
+  color: #333;
+  font-weight: 600;
+}
+
+.doctor-list-table tr:hover {
+  background-color: #f0f4ff;
+}
+
+/* Pagination styling */
+.doctor-pagination {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.doctor-pagination button {
+  background-color: #e0e0e0;
+  color: #333;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.doctor-pagination button.active,
+.doctor-pagination button:hover {
+  background-color: #5b5ebb;
+  color: white;
+}
+
+.doctor-pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .doctor-list-page {
+    padding: 1rem;
+  }
+
+  .doctor-list-header {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .doctor-list-table-wrapper {
+    padding: 1rem;
+  }
+
+  .doctor-list-table {
+    font-size: 0.85rem;
+  }
+
+  .doctor-pagination button {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+
+  .doctor-list-table th input {
+    font-size: 0.85rem;
+  }
+}

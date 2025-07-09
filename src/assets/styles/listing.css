@@ -1,0 +1,94 @@
+/* === Page Background === */
+.appointments-page {
+  background-color: #f5f6fa;
+  padding: 2rem;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  box-sizing: border-box;
+}
+
+/* === Section Header === */
+.appointments-header {
+  background-color: #5b5ebb;
+  color: #ffffff;
+  padding: 16px 28px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: 8px 8px 0 0;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* === Table Container === */
+.appointments-table-wrapper {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+}
+
+/* === Table Styling === */
+.appointments-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.appointments-table thead {
+  background-color: #f2f3f8;
+  font-weight: 600;
+  color: #333;
+}
+
+.appointments-table th,
+.appointments-table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.appointments-table th {
+  position: relative;
+}
+
+.appointments-table th .sort-icon {
+  font-size: 0.8rem;
+  margin-left: 6px;
+  cursor: pointer;
+  color: #888;
+}
+
+/* === Filter Inputs === */
+.appointments-table thead input[type="text"] {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+
+/* === Table Row Hover === */
+.appointments-table tbody tr:hover {
+  background-color: #f9f9ff;
+  transition: 0.2s;
+}
+
+/* === Responsive Tweaks === */
+@media screen and (max-width: 768px) {
+  .appointments-header {
+    font-size: 1.1rem;
+    padding: 12px 20px;
+  }
+
+  .appointments-table th,
+  .appointments-table td {
+    padding: 10px;
+  }
+
+  .appointments-table thead input[type="text"] {
+    font-size: 0.85rem;
+  }
+}
