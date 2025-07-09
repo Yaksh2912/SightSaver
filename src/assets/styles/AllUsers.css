@@ -2,7 +2,7 @@
   padding: 2rem;
   font-family: 'Segoe UI', sans-serif;
   background-color: #fefefe;
-  transition: all 0.3s ease-in-out;
+  /* transition: all 0.3s ease-in-out; */
 }
 
 .users-title {
@@ -32,7 +32,7 @@
   text-align: left;
   border-bottom: 1px solid #ddd;
   white-space: nowrap;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
 }
 
 .users-table th {
@@ -47,7 +47,7 @@
   padding: 0.4rem;
   border: 1px solid #ccc;
   border-radius: 4px;
-  transition: border-color 0.3s ease;
+  /* transition: border-color 0.3s ease; */
 }
 
 .users-table input:focus,
@@ -65,7 +65,7 @@
   border-radius: 4px;
   margin: 2px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  /* transition: background-color 0.3s ease, transform 0.2s ease; */
 }
 
 .approve-btn {
@@ -120,7 +120,7 @@
 }
 
 /* Fade-in animation for table rows */
-.fade-in {
+/* .fade-in {
   animation: fadeIn 0.4s ease-in;
 }
 
@@ -133,7 +133,7 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
+} */
 
 /* Responsive styles */
 @media (max-width: 768px) {
