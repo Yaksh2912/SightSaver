@@ -1,132 +1,171 @@
-/* === Page Background === */
-.pr-dashboard-content {
-  background-color: #f5f6fa;
-  padding: 2rem;
-  min-height: 100vh;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+.patient-register-container {
+  padding: 1.5rem;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-/* === White Form Card === */
-.pr-form-container {
-  width: 100%;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-  overflow: hidden;
-  border: 1px solid #e1e1e1;
-}
-
-/* === Top Form Header === */
-.pr-form-title {
+.form-title {
   background-color: #5b5ebb;
-  color: #ffffff;
-  padding: 18px 28px;
-  font-size: 1.3rem;
-  font-weight: 600;
-  border-bottom: 1px solid #ccc;
-  letter-spacing: 0.5px;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  border-radius: 4px;
+  width: fit-content;
 }
 
-/* === Section Groups === */
-.pr-registration-form fieldset {
-  border: none;
-  background-color: #f9f9f9;
-  padding: 28px;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.pr-registration-form legend {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: #444;
-  margin-bottom: 18px;
-  border-left: 4px solid #5b5ebb;
-  padding-left: 12px;
-}
-
-/* === Grid Layout === */
-.pr-form-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
-
-.pr-full-width {
-  grid-column: 1 / -1;
-}
-
-/* === Label & Inputs === */
-.pr-registration-form label {
-  display: block;
-  font-size: 0.92rem;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 6px;
-}
-
-.pr-registration-form input[type="text"],
-.pr-registration-form input[type="tel"],
-.pr-registration-form input[type="date"] {
-  width: 100%;
-  padding: 10px 12px;
-  border-radius: 6px;
+.patient-form {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
   border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+fieldset {
+  margin-bottom: 1.2rem;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+legend {
+  font-weight: bold;
+  color: #5b5ebb;
   font-size: 0.95rem;
-  background-color: #fff;
-  transition: border-color 0.2s;
 }
 
-.pr-registration-form input:focus {
-  outline: none;
-  border-color: #5b5ebb;
-  box-shadow: 0 0 0 2px rgba(91, 94, 187, 0.2);
-}
-
-/* === Radio/Checkbox Styling === */
-.pr-radio-group,
-.pr-checkbox-group {
+.form-row {
   display: flex;
-  flex-wrap: wrap;
   gap: 1.5rem;
-  margin-top: 6px;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
 }
 
-.pr-radio-group label,
-.pr-checkbox-group label {
+.form-row div {
+  flex: 1;
+  min-width: 250px;
+}
+
+.full-width {
+  flex: 1 1 100%;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+  width: 100%;
+  padding: 0.45rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover and Focus Effects */
+input[type="text"]:hover,
+input[type="date"]:hover,
+input[type="number"]:hover {
+  border-color: #6c531d;
+  background-color: #faf9f5;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4a4ecc;
+  box-shadow: 0 0 5px rgba(108, 83, 29, 0.3);
+}
+
+.radio-group,
+.checkbox-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.radio-group label,
+.checkbox-group label {
   font-weight: normal;
   font-size: 0.9rem;
-  color: #444;
+  cursor: pointer;
+  transition: color 0.2s ease;
 }
 
-/* === Buttons === */
-.pr-button-group {
-  padding: 20px 28px;
-  background-color: #f7f7f7;
-  border-top: 1px solid #e0e0e0;
+.radio-group label:hover,
+.checkbox-group label:hover {
+  color: #4a4eb0;
+}
+
+.form-buttons {
   display: flex;
   justify-content: flex-end;
-  gap: 14px;
+  gap: 1rem;
+  margin-top: 1.2rem;
+  flex-wrap: wrap;
 }
 
-.pr-btn {
-  padding: 10px 22px;
-  font-size: 0.95rem;
-  font-weight: 600;
+.btn {
+  padding: 0.45rem 1.2rem;
+  border-radius: 4px;
   border: none;
-  border-radius: 6px;
+  font-weight: 600;
   cursor: pointer;
-  color: #fff;
-  background-color: #5b5ebb;
-  transition: background-color 0.3s ease, transform 0.1s ease;
+  transition: all 0.2s ease-in-out;
 }
 
-.pr-btn:hover {
-  background-color: #4345a3;
+.btn.reset {
+  background-color: #ccc;
+  color: #000;
+}
+
+.btn.submit {
+  background-color: #5b5ebb;
+  color: #fff;
+}
+
+.btn.close {
+  background-color: #888;
+  color: #fff;
+}
+
+/* Button Hover Effects */
+.btn:hover {
+  opacity: 0.9;
   transform: translateY(-1px);
 }
 
-.pr-btn:active {
-  transform: translateY(0);
-  background-color: #3b3e8a;
+.btn.reset:hover {
+  background-color: #aaa;
+}
+
+.btn.submit:hover {
+  background-color: #5257d6;
+}
+
+.btn.close:hover {
+  background-color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+  }
 }

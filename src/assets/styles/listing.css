@@ -1,6 +1,6 @@
 /* === Page Background === */
 .appointments-page {
-  background-color: #f5f6fa;
+  background-color: #ffffff;
   padding: 2rem;
   min-height: 100vh;
   font-family: 'Segoe UI', sans-serif;
@@ -37,7 +37,7 @@
 }
 
 .appointments-table thead {
-  background-color: #f2f3f8;
+  background-color: #eaeafd;
   font-weight: 600;
   color: #333;
 }
