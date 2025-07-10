@@ -6,6 +6,7 @@
 -> git clone <url>
 -> cd sightsaver
 
+
 2. Install Dependencies
 
 -> npm install
@@ -18,10 +19,15 @@
 ---------------------------------TECH STACK--------------------------------
 
 Category - Technology
+
 Frontend	- React (Vite)
+
 Routing	- React Router DOM
+
 Icons	- React Icons
+
 UI Styling - CSS (Custom)
+
 Calendar	- react-calendar
 
 ---------------------------------------------------------------------------
