@@ -3,7 +3,7 @@
 
 1. Clone the Repository
    
--> git clone https://github.com/yourusername/sightsaver.git
+-> git clone <url>
 -> cd sightsaver
 
 2. Install Dependencies
@@ -28,25 +28,44 @@ Calendar	- react-calendar
 -----------------------------FOLDER STRUCTURE------------------------------
 
 src/
+
 ├── assets/
-│   └── images/          
+
+│   └── images/ 
+
 │   └── styles/ (all the css files)
+
 ├── components/
+
 │   ├── Sidebar.jsx
+
 │   ├── DashboardNavbar.jsx
+
 │   └── Navbar
+
 │   └── footer
+
 ├── Layouts/
+
 │   ├── DashboardLayout.jsx
+
 │   ├── LandingLayout.jsx
+
 ├── pages/
+
 │   ├── Dashboard.jsx/
+
 │   ├── Dashboard/ (all the pages related to dashboard)
+
 │   ├── Landing/ (all the pages related to the landing page)
-│   └── ...
+
+
 ├── Main.jsx
+
 ├── index.css
+
 └── App.jsx
+
 
 
 
