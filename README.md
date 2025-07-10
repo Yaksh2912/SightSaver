@@ -1,5 +1,6 @@
 ---------------------------------------------------------------------------
 ------------------------------Getting Started------------------------------
+
 1. Clone the Repository
    
 -> git clone https://github.com/yourusername/sightsaver.git
@@ -14,4 +15,15 @@
 -> npm run dev
 
 ---------------------------------------------------------------------------
+---------------------------------Tech Stack--------------------------------
+
+Category - Technology
+Frontend	- React (Vite)
+Routing	- React Router DOM
+Icons	- React Icons
+UI Styling - CSS (Custom)
+Calendar	- react-calendar
+
+---------------------------------------------------------------------------
+
 
